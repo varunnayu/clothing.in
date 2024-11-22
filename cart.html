@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Navigation content here -->
+    </nav>
+    <div class="small-container cart-page">
+        <h2>Your Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+        <div class="coupon-section">
+            <input type="text" id="coupon-code" placeholder="Enter coupon code">
+            <button onclick="applyCoupon()">Apply Coupon</button>
+        </div>
+        <div>Total Charges: <span id="cart-total">$6.00</span></div>
+        <button id="buy-now">Buy Now</button>
+    </div>
+    <script src="js/checkout.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/displayCart.js"></script>
+    <script src="js/coupon.js"></script>
+</body>
+</html>

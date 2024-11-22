@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <style>
+        @import url(css/nav.css);
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .faq-header {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .faq-question {
+            background-color: #f0f0f0;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: "\25BC"; /* Down arrow */
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(-180deg); /* Rotate the arrow up */
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            font-size: 16px;
+            background-color: #fafafa;
+        }
+
+        .faq-answer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar"></nav>
+    <script src="js/nav.js"></script>
+
+<div class="faq-container">
+    <div class="faq-header">FAQ - Order, Shipping, Etc.</div>
+
+    <div class="faq-item">
+        <div class="faq-question">When will my order arrive?</div>
+        <div class="faq-answer">
+            <p>Shipping time is set by our delivery partners, according to the delivery method chosen by you. Additional details can be found in the order confirmation.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">How do I track my order?</div>
+        <div class="faq-answer">
+            <p>You can track your order using the tracking number sent to your email. Visit our tracking page and enter the tracking number to view the status.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">What’s your return policy?</div>
+        <div class="faq-answer">
+            <p>We offer a 30-day return policy for most items. You can return your product within 30 days of purchase as long as it's in its original condition and packaging.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">What payment methods do you accept?</div>
+        <div class="faq-answer">
+            <p>We accept various payment methods including credit/debit cards, PayPal, and online banking. You can choose your preferred method during checkout.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const answer = item.querySelector('.faq-answer');
+            const isActive = question.classList.contains('active');
+
+            // Close all other faq-items
+            faqItems.forEach(i => {
+                i.querySelector('.faq-question').classList.remove('active');
+                i.querySelector('.faq-answer').style.display = 'none';
+            });
+
+            // Toggle the clicked item
+            if (!isActive) {
+                question.classList.add('active');
+                answer.style.display = 'block';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+@import url(styles.css);
+@import url(nav.css);
+
+.cart-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.cart-page table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-page table th, .cart-page table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.cart-page table th {
+  background-color: #f2f2f2;
+}
+
+.cart-page .product-image {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.cart-page .remove-button {
+  background-color: #ff523b;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart-page .remove-button:hover {
+  background-color: #ff0000;
+}
+
+.cart-page #buy-now {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cart-page #buy-now:hover {
+  background-color: #45a049;
+}
+
+
+.coupon-section {
+  margin: 20px 0;
+}
+
+.coupon-section input {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.coupon-section button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.coupon-section button:hover {
+  background-color: #0056b3;
+}

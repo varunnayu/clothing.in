@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            max-width: 900px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .container .video-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container .video-section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container .form-section {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .form-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .form-group input, 
+        .form-group select {
+            width: 48%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .form-group.full-width {
+            display: block;
+        }
+
+        .form-group.full-width input,
+        .form-group.full-width select {
+            width: 100%;
+        }
+
+        .form-group i {
+            margin-right: 10px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 4px;
+            background-color: #333;
+            color: white;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        body, video {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html">x</a>
+
+    <div class="video-section">
+        <video autoplay loop muted>
+            <source src="Mobile Shopping 3D Animation (HD).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="form-section">
+        <h2>Registration Form</h2>
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <div class="form-group full-width">
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="form-group full-width">
+                <input type="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group full-width">
+                <select required>
+                    <option value="" disabled selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group full-width">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="form-group full-width">
+                <input type="password" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+</div>
+<script>
+    // Prevent dragging the video
+    document.querySelector('video').addEventListener('dragstart', function(e) {
+        e.preventDefault();
+    });
+</script>
+</body>
+</html>

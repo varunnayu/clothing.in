@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.small-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.confirmation-page h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.confirmation-page p {
+    color: #666;
+}
+
+.confirmation-page ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: auto;
+    max-width: 400px;
+}
+
+.confirmation-page ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.confirmation-gif img {
+    max-width: 205%;
+    height: auto;
+    margin-bottom: 20px;
+}
+button{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
